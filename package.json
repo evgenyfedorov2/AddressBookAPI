@@ -2,9 +2,20 @@
   "name": "addressbookapi",
   "version": "1.0.0",
   "description": "Backend Test Project - Addressbook",
-  "main": "index.js",
+  "engines": {
+    "node": "~10.9.0",
+    "npm": "~6.4.0"
+  },
   "scripts": {
-    "test": "cross-env NODE_ENV=test npx mocha --opts ./tests/mocha.opts ./tests"
+    "test": "cross-env NODE_ENV=test npx mocha --opts ./tests/mocha.opts ./tests",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js | pino-pretty",
+    "lint": "eslint .",
+    "migrate:make": "knex migrate:make --knexfile ./src/database/knexfile.js",
+    "db:migrate": "knex migrate:latest --knexfile ./src/database/knexfile.js",
+    "db:rollback": "knex migrate:rollback --knexfile ./src/database/knexfile.js",
+    "infra": "docker-compose up -d",
+    "infra-stop": "docker-compose down"
   },
   "repository": {
     "type": "git",
@@ -12,5 +23,34 @@
   },
   "author": "Evgenii Fedorov",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/evgenyfedorov/addressbookapi#readme"
+  "homepage": "https://bitbucket.org/evgenyfedorov/addressbookapi#readme",
+  "devDependencies": {
+    "@strv/eslint-config-javascript": "^9.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "pino-pretty": "^2.2.1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.0.0",
+    "jsonschema": "^1.2.4",
+    "jsonwebtoken": "^8.3.0",
+    "kcors": "^2.2.2",
+    "knex": "^0.15.2",
+    "koa": "^2.5.3",
+    "koa-body": "^4.0.4",
+    "koa-compress": "^3.0.0",
+    "koa-router": "^7.4.0",
+    "node-fetch": "^2.3.0",
+    "nyc": "^13.1.0",
+    "objection": "^1.4.0",
+    "pg": "^7.4.3",
+    "pino": "^5.9.0",
+    "ramda": "^0.25.0",
+    "sinon": "^7.1.1",
+    "supertest-koa-agent": "^0.3.0"
+  }
 }
