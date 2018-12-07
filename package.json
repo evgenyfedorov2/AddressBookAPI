@@ -1,0 +1,16 @@
+{
+  "name": "addressbookapi",
+  "version": "1.0.0",
+  "description": "Backend Test Project - Addressbook",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test npx mocha --opts ./tests/mocha.opts ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://evgenyfedorov@bitbucket.org/evgenyfedorov/addressbookapi.git"
+  },
+  "author": "Evgenii Fedorov",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/evgenyfedorov/addressbookapi#readme"
+}
