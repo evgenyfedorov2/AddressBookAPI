@@ -16,8 +16,8 @@ router.post('/session/user', users.login)
 
 /* PRIVATE ROUTES */
 
-router.post('/contacts', authenticate, contacts.getAll)
-router.post('/contacts/:id', authenticate, contacts.getById)
+router.get('/contacts', authenticate, contacts.getAll)
+router.get('/contacts/:id', authenticate, contacts.getById)
 router.post('/contact', authenticate, contacts.createContact)
 
 router.use(handleNotFound)

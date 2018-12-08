@@ -15,9 +15,10 @@ async function getById(input) {
   return contact
 }
 
-function createContact(input) {
+async function createContact(input) {
   // For the sake of simplicity, we are not checking if photo is still null at this point.
-  return contactRepository.create(input)
+  const contact = await contactRepository.create(input)
+  return contact
 }
 
 module.exports = {

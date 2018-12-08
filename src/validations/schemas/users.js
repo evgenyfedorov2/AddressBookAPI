@@ -17,7 +17,7 @@ const login = {
   },
 }
 
-const signUp = {
+const register = {
   type: 'Object',
   required: true,
   properties: {
@@ -28,18 +28,8 @@ const signUp = {
   },
 }
 
-const signIn = {
-  type: 'Object',
-  required: true,
-  properties: {
-    email: { type: 'string', required: true, format: 'email', maxLength: 80 },
-    password: { type: 'string', required: true, minLength: 8, maxLength: 80 },
-  },
-}
-
 module.exports = {
   jwtToken,
   login,
-  signUp,
-  signIn,
+  register,
 }

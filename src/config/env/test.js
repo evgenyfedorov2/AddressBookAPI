@@ -9,6 +9,6 @@ module.exports = {
     minLevel: 'error',
   },
   database: {
-    connection: 'postgres://postgres@localhost:5432/nodejs-nights-test',
+    connection: 'postgres://postgres@localhost:5432/addressbook-test',
   },
 }

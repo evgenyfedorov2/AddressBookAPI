@@ -15,8 +15,8 @@ const contact = {
     name: { type: 'string', required: true },
     email: { type: 'string', required: true },
     address: { type: 'string' },
-    birthYear: { type: 'number' },
-    mobilePhone: { type: 'string', format: 'phone' },
+    birthYear: { type: 'integer' },
+    mobilePhone: { type: 'string' },
   },
 }
 

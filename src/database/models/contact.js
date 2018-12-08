@@ -12,8 +12,8 @@ class Contact extends Base {
       type: 'object',
       required: [
         'name',
-        'breed',
-        'birthYear',
+        'email',
+        'mobilePhone',
       ],
 
       properties: {
@@ -24,6 +24,9 @@ class Contact extends Base {
           type: 'string',
         },
         email: {
+          type: 'string',
+        },
+        address: {
           type: 'string',
         },
         birthYear: {

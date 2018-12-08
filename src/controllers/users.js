@@ -4,7 +4,7 @@ const { validate } = require('../validations')
 const operations = require('../operations/users')
 const schema = require('../validations/schemas/users')
 
-async function register(ctx) {
+async function login(ctx) {
   const input = {
     email: ctx.request.body.email,
     password: ctx.request.body.password,
@@ -13,20 +13,20 @@ async function register(ctx) {
   ctx.body = await operations.login(input)
 }
 
-async function signUp(ctx) {
+async function register(ctx) {
   const input = {
     name: ctx.request.body.name,
     email: ctx.request.body.email,
     password: ctx.request.body.password,
     disabled: ctx.request.body.disabled || false,
   }
-  validate(schema.signUp, input)
-  const user = await operations.signUp(input)
+  validate(schema.register, input)
+  const user = await operations.register(input)
   ctx.status = 201
   ctx.body = user
 }
 
 module.exports = {
   register,
-  signUp,
+  login,
 }

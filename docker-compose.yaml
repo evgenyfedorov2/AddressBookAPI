@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+
+  database:
+    image: sameersbn/postgresql:latest
+    container_name: addressbook-db
+    environment:
+      - DB_NAME=addressbook-local,addressbook-test
+      - PG_TRUST_LOCALNET=true
+    ports:
+      - "5432:5432"

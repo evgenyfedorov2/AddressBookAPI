@@ -24,7 +24,7 @@ async function login(input) {
   }
 }
 
-async function signUp(input) {
+async function register(input) {
   logger.info({ input }, 'signUp start')
   const user = {
     name: input.name,
@@ -66,6 +66,6 @@ async function verifyTokenPayload(input) {
 
 module.exports = {
   login,
-  signUp,
+  register,
   verifyTokenPayload,
 }
