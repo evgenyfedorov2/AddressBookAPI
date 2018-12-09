@@ -3,9 +3,8 @@
 const errors = require('../utils/errors')
 const contactRepository = require('../repositories/contacts')
 
-async function getAll() {
-  const contacts = await contactRepository.findAll()
-  return contacts
+function getAll() {
+  return contactRepository.findAll()
 }
 
 async function getById(input) {
@@ -16,10 +15,8 @@ async function getById(input) {
   return contact
 }
 
-async function createContact(input) {
-  // For the sake of simplicity, we are not checking if photo is still null at this point.
-  const contact = await contactRepository.create(input)
-  return contact
+function createContact(input) {
+  return contactRepository.create(input)
 }
 
 module.exports = {

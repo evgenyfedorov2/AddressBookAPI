@@ -6,7 +6,7 @@ const logger = require('./../utils/logger')
 const crypto = require('./../utils/crypto')
 
 async function login(input) {
-  logger.info({ input }, 'login start')
+  logger.info({ input }, 'Login start')
   const user = await userRepository.findByEmail(input.email.toLowerCase())
   if (!user) {
     throw new errors.UnauthorizedError()
@@ -16,7 +16,7 @@ async function login(input) {
     throw new errors.UnauthorizedError()
   }
   const accessToken = await crypto.generateAccessToken(user.id)
-  logger.info('login end')
+  logger.info('Login end')
   return {
     id: user.id,
     email: user.email,
@@ -25,7 +25,7 @@ async function login(input) {
 }
 
 async function register(input) {
-  logger.info({ input }, 'signUp start')
+  logger.info({ input }, 'Registration start')
   const user = {
     name: input.name,
     email: input.email.toLowerCase(),
@@ -40,7 +40,7 @@ async function register(input) {
   }
   const createdUser = await userRepository.create(user)
   createdUser.accessToken = await crypto.generateAccessToken(createdUser.id)
-  logger.info('signUp end')
+  logger.info('Registration end')
   return createdUser
 }
 

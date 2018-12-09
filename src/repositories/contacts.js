@@ -2,9 +2,8 @@
 
 const { firebase } = require('../database/firebase')
 
-async function findAll() {
-  const snapshot = await firebase.database().ref('contacts').once('value')
-  return snapshot.val()
+function findAll() {
+  return firebase.database().ref('contacts').once('value')
 }
 
 async function findById(id) {
@@ -13,13 +12,7 @@ async function findById(id) {
 }
 
 function create(attributes) {
-  return firebase.database().ref('contacts/').push({
-    name: attributes.name,
-    email: attributes.email,
-    address: attributes.address,
-    birthYear: attributes.birthYear,
-    mobilePhone: attributes.mobilePhone,
-  })
+  return firebase.database().ref('contacts/').push({ ...attributes })
 }
 
 module.exports = {
