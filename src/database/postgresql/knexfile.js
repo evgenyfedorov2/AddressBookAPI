@@ -1,7 +1,7 @@
 'use strict'
 
 const R = require('ramda')
-const config = require('../config')
+const config = require('../../config')
 
 const staticDatabaseConfig = {
   migrations: {
@@ -12,7 +12,7 @@ const staticDatabaseConfig = {
   },
 }
 
-const databaseConfig = R.mergeDeepLeft(config.database, staticDatabaseConfig)
+const databaseConfig = R.mergeDeepLeft(config.databasePG, staticDatabaseConfig)
 
 module.exports = {
   [config.env]: databaseConfig,

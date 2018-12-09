@@ -8,7 +8,7 @@ module.exports = {
     stdout: true,
     minLevel: 'error',
   },
-  database: {
+  databasePG: {
     connection: 'postgres://postgres@localhost:5432/addressbook-test',
   },
 }

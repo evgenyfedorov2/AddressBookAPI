@@ -9,7 +9,7 @@ pg.types.setTypeParser(1700, 'text', parseFloat)
 // -- end --
 const knexLib = require('knex')
 const R = require('ramda')
-const config = require('../config')
+const config = require('../../config')
 const knexEnvConfig = require('./knexfile')[config.env]
 
 const knexConfig = R.mergeDeepWith({}, knexEnvConfig, objection.knexSnakeCaseMappers())

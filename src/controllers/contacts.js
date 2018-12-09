@@ -10,7 +10,7 @@ async function getAll(ctx) {
 
 async function getById(ctx) {
   const input = {
-    id: parseInt(ctx.params.id),
+    id: ctx.params.id,
   }
   validate(schemas.contactId, input)
   ctx.body = await operations.getById(input)

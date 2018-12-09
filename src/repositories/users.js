@@ -1,6 +1,6 @@
 'use strict'
 
-const { User } = require('../database/models')
+const { User } = require('../database/postgresql/models')
 
 /**
  * Returns all records

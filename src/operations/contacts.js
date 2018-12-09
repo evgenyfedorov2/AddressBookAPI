@@ -3,8 +3,9 @@
 const errors = require('../utils/errors')
 const contactRepository = require('../repositories/contacts')
 
-function getAll() {
-  return contactRepository.findAll()
+async function getAll() {
+  const contacts = await contactRepository.findAll()
+  return contacts
 }
 
 async function getById(input) {

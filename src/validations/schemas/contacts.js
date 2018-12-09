@@ -4,7 +4,7 @@ const contactId = {
   type: 'Object',
   required: true,
   properties: {
-    id: { type: 'integer', required: true, min: 1, max: 100000 },
+    id: { type: 'string', required: true },
   },
 }
 

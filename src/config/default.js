@@ -46,13 +46,21 @@ module.exports = env => ({
     stdout: true,
     minLevel: 'debug',
   },
-  database: {
+  databasePG: {
     client: 'pg',
-    connection: process.env.DATABASE_URL
-      || 'postgres://postgres@localhost:5432/nodejs-nights-local',
+    connection: process.env.DATABASEPB_URL
+      || 'postgres://postgres@localhost:5432/addressbook-test-local',
     pool: {
       min: process.env.DATABASE_POOL_MIN || 0,
       max: process.env.DATABASE_POOL_MAX || 5,
     },
+  },
+  databaseFirebase: {
+    apiKey: 'AIzaSyCJbhvkQcpYBJqcYgD9VWbaWVA53_7tVpw',
+    authDomain: 'addressbookapi-afc02.firebaseapp.com',
+    databaseURL: process.env.DATABASEFB_URL || 'https://addressbookapi-afc02.firebaseio.com',
+    projectId: 'addressbookapi-afc02',
+    storageBucket: 'addressbookapi-afc02.appspot.com',
+    messagingSenderId: '842723281975',
   },
 })
