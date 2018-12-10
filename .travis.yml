@@ -34,7 +34,7 @@ deploy:
     on:
       branch:
       - master
-      repo: evgenyfedorov2/addressbookapi
+      repo: evgenyfedorov2/AddressBookAPI
     api_key:
       secure: DiR5vy4d8csqeeIR+6xF0iCBy3JlB3gzgUPiYvyh1BwM2O52Rr9Wy3I65N0pxqydVDUE04iFaP7f5uuaSRzF0O/d1Ib4yxCQyFEkOaJnXAJ2O8/vJIi/VBFLiR/F8lh5y5OgmW1yugiLwdkhgsGxPbho6DLGh1LA9cUOdSN48MK9fyPM5tczpoAsvU+BUsL8UryKLWZf9fni1DDsNYmoLwg8cjspGZbo0qv7UChAcDBvihLKx7YCrUqrhT6aaNPF9ZYn5KwPfdVBnvwuZGCZrTrVUO1QGGhqksPpcJS+GntwCG0Mg9dDZ4aMY+M1OWCgzahjQ9FxrwK2A5nrDRliODQ+e5rbU04OhhT/T7+QtBqa2H/eJVbVCa8WbbMhdxOvUL6fjsFIYaD9JS1K1YNQYYMfqdXEDyA56CtY6CCL//H5sD/yTlfAE41xWfj30CPP8QaRUr+xuC7yVGsV0Faf0ZpK6ZuuoGaq91ESDurvUcqbPPfU3UT1ll29NiZEFNOJW4uaj9bCybr2UBaExSqdVOh5ahtxOczunJ8wlWECZ9DdGbOW05q7PTOAUVBW0lx8cpeFmrvSvsX/Y0ZnVlAvwecNKm4GQ5e7pgWoKyxJpwsV+r7Xav7WAB4GNqsITlf2bKHOeDkYceVkw2yk8LJ+KAPsEmuu2HZaW+HQi6+4+NA=
 notifications:
