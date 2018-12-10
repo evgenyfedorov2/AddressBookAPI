@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Backend Test Project - Addressbook",
   "engines": {
-    "node": "~10.9.0",
-    "npm": "~6.4.0"
+    "node": "~11.0.0",
+    "npm": "~6.4.1"
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test npx mocha --opts ./tests/mocha.opts ./tests",
+    "test:coverage": "cross-env NODE_ENV=test npx nyc mocha --opts ./tests/mocha.opts ./tests",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js | pino-pretty",
     "lint": "eslint .",
@@ -30,7 +31,10 @@
     "eslint": "^5.9.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.4",
-    "pino-pretty": "^2.2.1"
+    "nyc": "^13.1.0",
+    "pino-pretty": "^2.2.1",
+    "sinon": "^7.1.1",
+    "supertest-koa-agent": "^0.3.0"
   },
   "dependencies": {
     "bcrypt": "^3.0.2",
@@ -46,12 +50,9 @@
     "koa-compress": "^3.0.0",
     "koa-router": "^7.4.0",
     "node-fetch": "^2.3.0",
-    "nyc": "^13.1.0",
     "objection": "^1.4.0",
     "pg": "^7.4.3",
     "pino": "^5.9.0",
-    "ramda": "^0.25.0",
-    "sinon": "^7.1.1",
-    "supertest-koa-agent": "^0.3.0"
+    "ramda": "^0.25.0"
   }
 }
