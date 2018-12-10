@@ -20,11 +20,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://evgenyfedorov@bitbucket.org/evgenyfedorov/addressbookapi.git"
+    "url": "git+https://github.com/evgenyfedorov2/AddressBookAPI.git"
   },
   "author": "Evgenii Fedorov",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/evgenyfedorov/addressbookapi#readme",
+  "homepage": "https://github.com/evgenyfedorov2/AddressBookAPI#readme",
   "devDependencies": {
     "@strv/eslint-config-javascript": "^9.1.0",
     "chai": "^4.2.0",
