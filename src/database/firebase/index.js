@@ -1,10 +1,10 @@
 'use strict'
 
 const firebase = require('firebase')
-const config = require('./../../config')
+const config = require('../../config')
 
-firebase.initializeApp(config.databaseFirebase)
+const firebaseApp = firebase.initializeApp(config.databaseFirebase, config.env)
 
 module.exports = {
-  firebase,
+  firebaseApp,
 }
