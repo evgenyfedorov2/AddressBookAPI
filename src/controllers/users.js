@@ -10,6 +10,7 @@ async function login(ctx) {
     password: ctx.request.body.password,
   }
   validate(schema.login, input)
+  ctx.status = 200
   ctx.body = await operations.login(input)
 }
 
