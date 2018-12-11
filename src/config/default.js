@@ -49,7 +49,7 @@ module.exports = env => ({
   databasePG: {
     client: 'pg',
     connection: process.env.DATABASEPB_URL
-      || 'postgres://postgres@localhost:5432/addressbook-test-local',
+      || 'postgres://postgres@localhost:5432/addressbook-local',
     pool: {
       min: process.env.DATABASE_POOL_MIN || 0,
       max: process.env.DATABASE_POOL_MAX || 5,
