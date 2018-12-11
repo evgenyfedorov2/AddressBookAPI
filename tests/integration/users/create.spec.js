@@ -12,7 +12,6 @@ describe('Users', () => {
   context('POST /users', () => {
     const userData = {
       email: 'username@gmail.com',
-      name: 'username',
     }
 
     it('responds with newly created user', async () => {
@@ -26,7 +25,6 @@ describe('Users', () => {
 
       expect(res.body).to.deep.include({
         ...userData,
-        disabled: false,
         id: 1,
       })
 

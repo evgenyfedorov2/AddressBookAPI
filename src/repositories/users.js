@@ -3,14 +3,6 @@
 const { User } = require('../database/postgresql/models')
 
 /**
- * Returns all records
- * @return {Promise<Array>}
- */
-function findAll() {
-  return User.query()
-}
-
-/**
  * Find user by id
  * @param {Number} id User id
  * @return {Promise<User>}
@@ -26,10 +18,6 @@ function findById(id) {
  */
 function findByEmail(email) {
   return User.query().where('email', email).first()
-}
-
-function patchById(id, data) {
-  return User.query().patch(data).where({ id })
 }
 
 /**
@@ -49,8 +37,6 @@ async function create(attributes) {
 }
 
 module.exports = {
-  patchById,
-  findAll,
   findById,
   findByEmail,
   create,

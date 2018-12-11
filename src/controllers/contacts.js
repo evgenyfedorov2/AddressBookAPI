@@ -4,20 +4,6 @@ const { validate } = require('../validations')
 const operations = require('../operations/contacts')
 const schemas = require('../validations/schemas/contacts')
 
-async function getAll(ctx) {
-  ctx.body = await operations.getAll()
-  ctx.status = 200
-}
-
-async function getById(ctx) {
-  const input = {
-    id: ctx.params.id,
-  }
-  validate(schemas.contactId, input)
-  ctx.body = await operations.getById(input)
-  ctx.status = 200
-}
-
 async function createContact(ctx) {
   const input = {
     name: ctx.request.body.name,
@@ -33,7 +19,5 @@ async function createContact(ctx) {
 }
 
 module.exports = {
-  getAll,
-  getById,
   createContact,
 }

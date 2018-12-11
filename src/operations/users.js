@@ -27,10 +27,8 @@ async function login(input) {
 async function register(input) {
   logger.info({ input }, 'Registration start')
   const user = {
-    name: input.name,
     email: input.email.toLowerCase(),
     password: await crypto.hashPassword(input.password),
-    disabled: input.disabled || false,
   }
 
   const existingUser = await userRepository.findByEmail(user.email)

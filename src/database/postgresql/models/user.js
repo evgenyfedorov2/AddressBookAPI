@@ -13,7 +13,6 @@ class User extends Base {
       type: 'object',
       required: [
         'email',
-        'name',
         'password',
       ],
 
