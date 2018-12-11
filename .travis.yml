@@ -27,7 +27,7 @@ script:
 - npm run test:coverage
 deploy:
   - provider: heroku
-    skip_cleanup: true
+    skip_cleanup: false
     app: addressbookapi-afc02
     strategy: git
     on:
