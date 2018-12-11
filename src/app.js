@@ -22,7 +22,7 @@ app.use(router)
 
 // Define start method
 app.start = async () => {
-  log.info('Starting app…')
+  log.info('Starting app...')
 
   // Start any services here:
   // e.g. database connection.
@@ -34,7 +34,7 @@ app.start = async () => {
 
 // Define app shutdown
 app.stop = async () => {
-  log.info('Stopping app…')
+  log.info('Stopping app...')
 
   // Stop everything now.
   // e.g. close database connection

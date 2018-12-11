@@ -11,4 +11,12 @@ module.exports = {
   databasePG: {
     connection: 'postgres://postgres@localhost:5432/addressbook-test',
   },
+  databaseFirebase: {
+    apiKey: 'AIzaSyB0ewvuMY0f0BL4DDCH_8MbxcQdEtXqCEY',
+    authDomain: 'addressbookapi-test.firebaseapp.com',
+    databaseURL: 'https://addressbookapi-test.firebaseio.com',
+    projectId: 'addressbookapi-test',
+    storageBucket: 'addressbookapi-test.appspot.com',
+    messagingSenderId: '979005675330'
+  },
 }
