@@ -13,7 +13,7 @@ services:
 - docker
 env:
   global:
-  - NODE_ENV=test
+  - NODE_ENV=production
 install:
 - npm install
 before_script:
