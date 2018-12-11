@@ -21,8 +21,8 @@ before_script:
 - docker ps
 - npm run infra
 - sleep 5
-- npm run db:migrate
 - NODE_ENV=test npm run db:migrate
+- npm run db:migrate
 script:
 - npm run test:coverage
 after_success:
