@@ -2,17 +2,22 @@
 
 [![Build Status](https://travis-ci.com/evgenyfedorov2/AddressBookAPI.svg?branch=master)](https://travis-ci.com/evgenyfedorov2/AddressBookAPI)
 
-### Application URL:
+## Application URL
+
 - https://addressbookapi-afc02.herokuapp.com/
+
 --------------------------
 
-### TECHNOLOGIES
+## TECHNOLOGIES
+
 - Node.js
 - Postgres
 - Firebase
+
 --------------------------
 
-### DOCUMENTATION
+## DOCUMENTATION
+
 - https://documenter.getpostman.com/view/1558245/RzfjknVo
 
 --------------------------
